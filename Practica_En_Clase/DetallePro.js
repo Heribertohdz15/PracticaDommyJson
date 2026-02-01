@@ -24,10 +24,8 @@ const Detalle_producto = (producto) => {
             <div class="detalle-visual">
                 <img src="${producto.thumbnail}" alt="${producto.title}">
             </div>
-            
-            <div class="detalle-info">
+             <strong>Descripcion: </strong>${producto.description}
                 <div class="meta-datos">
-                    <strong>Descripcion: </strong>${producto.description}</p> 
                     <p><strong>Precio: </strong> $${producto.price}</p>
                     <p><strong>Marca: </strong> ${producto.brand}</p>
                     <p><strong>Categoría: </strong> ${producto.category}</p>
@@ -36,7 +34,7 @@ const Detalle_producto = (producto) => {
                 </div>
                 
                 <button type="button" class="btn-regresar" onclick="window.history.back()">Regresar</button>
-            </div>
+
         </div>
     `;
 }

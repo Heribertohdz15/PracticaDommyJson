@@ -17,13 +17,15 @@ const renderizarProductos = (productos) => {
         tarjeta.className = "practice-card";
         tarjeta.href = `DetalleProducto.html?id=${producto.id}`;
 
-        // Regresamos a tu estructura original de <br> y etiquetas b
         tarjeta.innerHTML = `
             <h3>${producto.title}</h3>
             <img src="${producto.images[0]}" alt="${producto.title}" width="200" height="200">
-            <p><b>Precio:</b> $${producto.price}</p>
-            <p><b>Categoría:</b> ${producto.category}</p>
-            <p><b>Rating:</b> ${producto.rating}</p>
+            <div class="meta-datos">
+              <p><strong>Precio: </strong> $${producto.price}</p>
+              <p><strong>Marca: </strong> ${producto.brand}</p>
+              <p><strong>Categoría: </strong> ${producto.category}</p>
+              <p><strong>Rating: </strong> ${producto.rating}</p>
+            </div>
         `;
         contenedorProductos.appendChild(tarjeta);
     });
